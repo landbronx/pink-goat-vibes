@@ -19,7 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'graffiti': ['Fredoka One', 'Bungee', 'cursive'],
+				'graffiti': ['Rock Salt', 'cursive'],
 				'horror': ['Nosifer', 'cursive'],
 			},
 			colors: {
