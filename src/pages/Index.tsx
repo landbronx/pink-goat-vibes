@@ -1,5 +1,4 @@
 import { NeonText } from "@/components/NeonText";
-import goatImage from "@/assets/goat.png";
 
 const Index = () => {
   return (
@@ -13,19 +12,9 @@ const Index = () => {
         {/* Goat image */}
         <div className="flex justify-center mb-8">
           <img 
-            src={goatImage} 
-            alt="Goat illustration" 
-            className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain animate-float filter brightness-0 invert"
-            style={{
-              filter: `
-                brightness(0) 
-                invert(1) 
-                sepia(1) 
-                saturate(2) 
-                hue-rotate(300deg) 
-                drop-shadow(0 0 20px hsl(var(--neon-pink)))
-              `
-            }}
+            src="/lovable-uploads/c2c88c8e-874b-492e-80fa-e4e2e3458996.png"
+            alt="White goat on hillside" 
+            className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-contain animate-float rounded-lg shadow-neon"
           />
         </div>
         

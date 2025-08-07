@@ -32,10 +32,10 @@ export const NeonText = ({
       )}
       style={{
         textShadow: `
-          0 0 5px hsl(var(--neon-pink)),
-          0 0 10px hsl(var(--neon-pink)),
+          0 0 8px hsl(var(--neon-pink)),
           0 0 15px hsl(var(--neon-pink)),
-          0 0 20px hsl(var(--neon-pink))
+          0 0 25px hsl(var(--neon-pink)),
+          0 0 35px hsl(var(--neon-pink))
         `
       }}
     >

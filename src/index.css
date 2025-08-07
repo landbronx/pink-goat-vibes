@@ -6,49 +6,49 @@
 
 @layer base {
   :root {
-    /* Dark minimalistic background */
-    --background: 0 0% 8%;
-    --foreground: 330 100% 85%;
+    /* Clean white background */
+    --background: 0 0% 100%;
+    --foreground: 330 100% 15%;
 
     /* Card and surfaces */
-    --card: 0 0% 12%;
-    --card-foreground: 330 100% 85%;
+    --card: 0 0% 98%;
+    --card-foreground: 330 100% 15%;
 
-    --popover: 0 0% 12%;
-    --popover-foreground: 330 100% 85%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 330 100% 15%;
 
-    /* Pink neon theme */
-    --primary: 330 100% 50%;
-    --primary-foreground: 0 0% 8%;
+    /* Pink neon theme - darker for white background */
+    --primary: 330 100% 40%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 330 100% 25%;
-    --secondary-foreground: 330 100% 85%;
+    --secondary: 330 100% 60%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 330 50% 60%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 330 50% 30%;
 
-    --accent: 330 100% 65%;
-    --accent-foreground: 0 0% 8%;
+    --accent: 330 100% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 330 30% 25%;
-    --input: 330 30% 25%;
-    --ring: 330 100% 50%;
+    --border: 330 30% 85%;
+    --input: 330 30% 85%;
+    --ring: 330 100% 40%;
 
-    /* Neon colors */
-    --neon-pink: 330 100% 50%;
-    --neon-pink-bright: 330 100% 65%;
-    --neon-pink-glow: 330 100% 50%;
+    /* Neon colors - darker for visibility on white */
+    --neon-pink: 330 100% 40%;
+    --neon-pink-bright: 330 100% 50%;
+    --neon-pink-glow: 330 100% 40%;
 
     /* Gradients */
-    --gradient-neon: linear-gradient(135deg, hsl(330 100% 50%), hsl(330 100% 65%));
+    --gradient-neon: linear-gradient(135deg, hsl(330 100% 40%), hsl(330 100% 50%));
     
-    /* Shadows and glows */
-    --shadow-neon: 0 0 20px hsl(330 100% 50% / 0.5);
-    --shadow-neon-strong: 0 0 40px hsl(330 100% 50% / 0.7);
-    --text-shadow-neon: 0 0 10px hsl(330 100% 50% / 0.8);
+    /* Shadows and glows - stronger for white background */
+    --shadow-neon: 0 0 20px hsl(330 100% 40% / 0.6);
+    --shadow-neon-strong: 0 0 40px hsl(330 100% 40% / 0.8);
+    --text-shadow-neon: 0 0 15px hsl(330 100% 40% / 0.9);
 
     --radius: 0.5rem;
 
