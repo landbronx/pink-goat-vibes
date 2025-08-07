@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'graffiti': ['Creepster', 'cursive'],
+				'horror': ['Nosifer', 'cursive'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,6 +56,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				neon: {
+					pink: 'hsl(var(--neon-pink))',
+					bright: 'hsl(var(--neon-pink-bright))',
+					glow: 'hsl(var(--neon-pink-glow))',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +93,32 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'neon-pulse': {
+					'0%, 100%': {
+						textShadow: '0 0 5px hsl(var(--neon-pink)), 0 0 10px hsl(var(--neon-pink)), 0 0 15px hsl(var(--neon-pink))'
+					},
+					'50%': {
+						textShadow: '0 0 10px hsl(var(--neon-pink)), 0 0 20px hsl(var(--neon-pink)), 0 0 30px hsl(var(--neon-pink))'
+					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
+				'float': 'float 3s ease-in-out infinite'
+			},
+			boxShadow: {
+				'neon': 'var(--shadow-neon)',
+				'neon-strong': 'var(--shadow-neon-strong)',
+			},
+			textShadow: {
+				'neon': 'var(--text-shadow-neon)',
 			}
 		}
 	},
