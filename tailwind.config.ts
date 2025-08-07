@@ -19,7 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'graffiti': ['Creepster', 'cursive'],
+				'graffiti': ['Fredoka One', 'Bungee', 'cursive'],
 				'horror': ['Nosifer', 'cursive'],
 			},
 			colors: {
