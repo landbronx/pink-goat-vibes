@@ -4,7 +4,8 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/",                     // 👈 tells Vite that the site sits at the domain root
+  base: "/",
+  build: { outDir: 'docs',
   server: {
     host: "::",
     port: 8080,
