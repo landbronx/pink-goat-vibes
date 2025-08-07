@@ -5,18 +5,13 @@ import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
   base: "/",
-  build: { outDir: 'docs',
-  server: {
-    host: "::",
-    port: 8080,
-  },
+  build: { outDir: "dist" },   // Vercel doesn’t care what the folder is
+  server: { host: "::", port: 8080 },
   plugins: [
     react(),
     mode === "development" && componentTagger(),
   ].filter(Boolean),
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
+    alias: { "@": path.resolve(__dirname, "./src") },
   },
 }));
