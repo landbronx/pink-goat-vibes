@@ -3,28 +3,26 @@ import { FlagIcon } from "@/components/FlagIcon";
 import { useState } from "react";
 
 const Index = () => {
-  const [isSpanish, setIsSpanish] = useState(false);
-  const [laserMode, setLaserMode] = useState(false);
+  const [flagState, setFlagState] = useState<"usa" | "argentina" | "laser">("usa");
 
-  const toggleLanguage = () => {
-    setIsSpanish(!isSpanish);
+  const cycleFlagState = () => {
+    setFlagState(prev => {
+      if (prev === "usa") return "argentina";
+      if (prev === "argentina") return "laser";
+      return "usa";
+    });
   };
 
-  const toggleLaser = () => {
-    setLaserMode(!laserMode);
-  };
+  const isSpanish = flagState === "argentina" || flagState === "laser";
+  const laserMode = flagState === "laser";
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-background px-4 relative">
-      {/* Flag toggles in top right */}
-      <div className="absolute top-6 right-6 flex gap-3">
+      {/* Single cycling flag in top right */}
+      <div className="absolute top-6 right-6">
         <FlagIcon 
-          country={isSpanish ? "usa" : "argentina"}
-          onClick={toggleLanguage}
-        />
-        <FlagIcon 
-          country="laser"
-          onClick={toggleLaser}
+          country={flagState}
+          onClick={cycleFlagState}
         />
       </div>
 
@@ -45,15 +43,17 @@ const Index = () => {
           {/* Laser beams from goat eyes */}
           {laserMode && (
             <>
-              <div className="absolute top-[30%] left-[38%] w-[200px] h-[3px] bg-gradient-to-l from-pink-500 to-pink-600 opacity-80 animate-pulse z-20" 
-                   style={{ transform: 'rotate(-5deg)' }} />
-              <div className="absolute top-[32%] left-[42%] w-[200px] h-[3px] bg-gradient-to-l from-pink-500 to-pink-600 opacity-80 animate-pulse z-20" 
-                   style={{ transform: 'rotate(-3deg)' }} />
+              {/* Left eye laser beam pointing outward */}
+              <div className="absolute top-[32%] left-[25%] w-[150px] h-[4px] bg-gradient-to-l from-pink-500 via-pink-400 to-pink-600 opacity-90 animate-pulse z-20" 
+                   style={{ transform: 'rotate(-15deg)', transformOrigin: 'right center' }} />
+              {/* Right eye laser beam pointing outward */}
+              <div className="absolute top-[32%] right-[25%] w-[150px] h-[4px] bg-gradient-to-r from-pink-500 via-pink-400 to-pink-600 opacity-90 animate-pulse z-20" 
+                   style={{ transform: 'rotate(15deg)', transformOrigin: 'left center' }} />
             </>
           )}
           
           {/* Bottom text overlapping image */}
-          <div className="absolute bottom-2 transform -rotate-2 z-10">
+          <div className="absolute -bottom-6 transform -rotate-2 z-10">
             <NeonText size="large">
               {isSpanish ? "DE CABRA" : "COFFEE"}
             </NeonText>
