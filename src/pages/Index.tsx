@@ -18,7 +18,7 @@ const Index = () => {
           />
           
           {/* COFFEE title overlapping bottom of image */}
-          <div className="absolute bottom-0 transform rotate-3">
+          <div className="absolute -bottom-8 transform -rotate-2">
             <NeonText size="large">
               COFFEE
             </NeonText>
