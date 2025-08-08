@@ -105,13 +105,19 @@ export default {
 				'float': {
 					'0%, 100%': { transform: 'translateY(0px)' },
 					'50%': { transform: 'translateY(-10px)' }
+				},
+				'wave': {
+					'0%, 100%': { transform: 'rotate(0deg) scale(1)' },
+					'25%': { transform: 'rotate(-2deg) scale(1.02)' },
+					'75%': { transform: 'rotate(2deg) scale(0.98)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
-				'float': 'float 3s ease-in-out infinite'
+				'float': 'float 3s ease-in-out infinite',
+				'wave': 'wave 2s ease-in-out infinite'
 			},
 			boxShadow: {
 				'neon': 'var(--shadow-neon)',
