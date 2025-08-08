@@ -110,6 +110,10 @@ export default {
 					'0%, 100%': { transform: 'rotate(0deg) scale(1)' },
 					'25%': { transform: 'rotate(-2deg) scale(1.02)' },
 					'75%': { transform: 'rotate(2deg) scale(0.98)' }
+				},
+				'gentle-wave': {
+					'0%, 100%': { transform: 'rotate(0deg) scale(1)' },
+					'50%': { transform: 'rotate(-1deg) scale(1.01)' }
 				}
 			},
 			animation: {
@@ -117,7 +121,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
 				'float': 'float 3s ease-in-out infinite',
-				'wave': 'wave 2s ease-in-out infinite'
+				'wave': 'wave 2s ease-in-out infinite',
+				'gentle-wave': 'gentle-wave 3s ease-in-out infinite'
 			},
 			boxShadow: {
 				'neon': 'var(--shadow-neon)',
